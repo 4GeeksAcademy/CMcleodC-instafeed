@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Connor Clements, Ivan Torres, Natalia L. Salas " />
+    <!-- Boostrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Fontawesome JS -->
+    <script src="https://kit.fontawesome.com/b557a4f1a1.js" crossorigin="anonymous"></script>
+
+    <title>Instagram Feed</title>
+</head>
+
+<body>
+    <div class="container-fluid mb-5">
+        <!-- HEADER -->
+        <div class="row">
+            <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <i class="fa-brands fa-instagram"></i> Instagram
+                    </a>
+                    <div class="d-flex">
+                        <button type="button" class="btn btn-success me-2" data-bs-toggle="modal"
+                            data-bs-target="#newPost">Create a new post</button>
+
+                        <div class="dropdown">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-gear"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                                <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                                <li>
+                                    <div class="dropdown-divider"></div>
+                                </li>
+                                <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="newPost" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">Caption:</label>
+                                            <textarea class="form-control"
+                                                placeholder="Add the caption of your post here"
+                                                id="floatingTextarea"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-light"><i
+                                                class="fa-solid fa-camera"></i></button> <button type="submit"
+                                            class="btn btn-light"><i class="fa-solid fa-location-dot"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-success">Publish</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </nav>
+        <!-- TABS -->
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <ul class="nav nav-tabs border-0 mt-2" id="myTab">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active border-0" id="tab-grid" data-bs-toggle="tab" data-bs-target="#grid"
+                            type="button" role="tab" aria-controls="home" aria-selected="true">
+                            <i class="fa-solid fa-table-cells text-primary mx-auto"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link border-0" id="tab-square" data-bs-toggle="tab" data-bs-target="#square"
+                            type="button" role="tab" aria-controls="profile" aria-selected="false">
+                            <i class="fa-solid fa-square text-secondary mx-auto"></i>
+                        </button>
+                    </li>
+    
+                </ul>
+            </div>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="grid" role="tabpanel" aria-labelledby="home-tab">
+                    <!-- Grid Gallery -->
+                    <div class="row g-2 g-lg-3 mb-3 mt-2">
+                        <div class="col-lg-4 mb-1 mb-lg-0">
+                            <img src="https://picsum.photos/201" class="w-100 mh-100" alt="Mountains in the Clouds" />
+                        </div>
+                        <div class="col-lg-4 mb-1 mb-lg-0">
+                            <img src="https://i.pinimg.com/originals/52/2a/5d/522a5db5db839dfa8bebce25dea6fd31.jpg"
+                                class="w-100 mh-100" alt="Mountains in the Clouds" />
+                        </div>
+                        <div class="col-lg-4 mb-1 mb-lg-0">
+                            <img src="https://picsum.photos/202" class="w-100 mh-100" alt="Mountains in the Clouds" />
+                        </div>
+                    </div>
+                    <div class="row g-2 g-lg-3 mb-3">
+                        <div class="col-lg-4 mb-1 mb-lg-0">
+                            <img src="https://picsum.photos/203" class="w-100 mh-100" alt="Mountains in the Clouds" />
+                        </div>
+                        <div class="col-lg-4 mb-1 mb-lg-0">
+                            <img src="https://picsum.photos/204" class="w-100 mh-100" alt="Mountains in the Clouds" />
+                        </div>
+                        <div class="col-lg-4 mb-1 mb-lg-0">
+                            <img src="https://picsum.photos/205" class="w-100 mh-100" alt="Mountains in the Clouds" />
+                        </div>
+                    </div>
+                    <div class="row g-2 g-lg-3 mb-3">
+                        <div class="col-lg-4 mb-1 mb-lg-0">
+                            <img src="https://picsum.photos/206" class="w-100 mh-100" alt="Mountains in the Clouds" />
+                        </div>
+                        <div class="col-lg-4 mb-1 mb-lg-0">
+                            <img src="https://picsum.photos/207" class="w-100 mh-100" alt="Mountains in the Clouds" />
+                        </div>
+                        <div class="col-lg-4 mb-1 mb-lg-0">
+                            <img src="https://picsum.photos/208" class="w-100 mh-100" alt="Mountains in the Clouds" />
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="tab-pane fade" id="square" role="tabpanel" aria-labelledby="profile-tab">
+                    <!-- Cards gallery -->
+                    <div class="row mt-3">
+                        <div class="col-sm-12 col-md-12 col-lg-12 d-flex justify-content-center">
+                            <div class="card w-50">
+                                <div class="card-body p-1">
+                                    <div class="d-flex justify-content-between">
+                                        <h3 class="card-title fw-normal">My Crazy dog Spark!</h3>
+                                        <p class="card-text"><small class="text-muted">08/26</small></p>
+                                    </div>
+                                </div>
+                                <img src="https://picsum.photos/208" class="card-img-bottom" alt="...">
+                                <div class="card-body p-1">
+                                    <p class="card-title fw-bold">204 likes</h5>
+                                    <p class="card-text mb-2">This is an example of a very good photo that you can post on
+                                        instagram</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-sm-12 col-md-12 col-lg-12 d-flex justify-content-center">
+                            <div class="card w-50">
+                                <div class="card-body p-1">
+                                    <div class="d-flex justify-content-between">
+                                        <h3 class="card-title fw-normal">The greatness of Croatia</h3>
+                                        <p class="card-text"><small class="text-muted">04/09</small></p>
+                                    </div>
+                                </div>
+                                <img src="https://picsum.photos/209" class="card-img-bottom" alt="...">
+                                <div class="card-body p-1">
+                                    <p class="card-title fw-bold">26985 Likes</h5>
+                                    <p class="card-text mb-2">This is an example of a very good photo that you can post on
+                                        instagram</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-sm-12 col-md-12 col-lg-12 d-flex justify-content-center">
+                            <div class="card w-50">
+                                <div class="card-body p-1">
+                                    <div class="d-flex justify-content-between">
+                                        <h3 class="card-title fw-normal">Amazing GOAL by Cristiano!</h3>
+                                        <p class="card-text"><small class="text-muted">06/10</small></p>
+                                    </div>
+                                </div>
+                                <img src="https://picsum.photos/210" class="card-img-bottom" alt="...">
+                                <div class="card-body p-1">
+                                    <p class="card-title fw-bold">204 Likes</h5>
+                                    <p class="card-text mb-2">This is an example of a very good photo that you can post on
+                                        instagram</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
